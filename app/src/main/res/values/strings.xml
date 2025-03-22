@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">MoodPlusPlus2</string>
+    <string name="list_log">Mood Logs</string>
+    <string name="log_detail">Log Detail</string>
+    <string name="Nav_Back">Back</string>
+    <string name="Moodlog_Entry_Title">Add Moodlog</string>
+    <string name="no_mood_logs_description">No mood logs available!\nTap + to add.</string>
+    <string name="log_input">Add MoodLog</string>
+    <string name="summary">Log Summary</string>
+    <string name="exercise">Exercise</string>
+    <string name="external_resources">External Resources</string>
+    <string name="chatpoint_title">ChatPoint</string>
+    <string name="chatpoint_description">Provdie instant, interactive and confidential online emotional support chat service. It is developed and run by The Samaritan Befrienders Hong Kong.</string>
+    <string name="chatpoint_access">Website - https://chatpoint.org.hk/</string>
+    <string name="openup_title">OpenUp</string>
+    <string name="openup_description">Provide text-based online counseling for young people aged 11-35(24 hour). Youngsters could ventilate their sufferings and stress when they feel necessary.</string>
+    <string name="openup_access">Website - https://www.openup.hk/</string>
+    <string name="sbhk_title">The Samaritan Befrienders Hong Kong</string>
+    <string name="sbhk_description">Provide diversified services including emotional support, crisis intervention, education and training</string>
+    <string name="sbhk_access">Website - https://sbhk.org.hk/</string>
+    <string name="who_title">WHO - Mental Health</string>
+    <string name="who_description">Provide facts and news regarding topics including mental health, mental disorder, suicide, etc.</string>
+    <string name="who_access">Website - https://www.who.int/health-topics/mental-health</string>
+    <string name="ha_title">Hospital Authority Mental Health Direct</string>
+    <string name="ha_description">Enquiry related to mental illnesses, related treatment and support (24 hour)</string>
+    <string name="ha_access">Tel - 2466 7350</string>
+</resources>
