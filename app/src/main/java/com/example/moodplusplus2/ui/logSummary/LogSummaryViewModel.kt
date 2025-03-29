@@ -23,7 +23,8 @@ class LogSummaryViewModel(moodLogsRepository: MoodLogsRepository): ViewModel() {
             LogSummaryUiState(
                 sentimentCountList = sentimentCount,
                 sentimentBarDataList = sentimentCount.toBarData(),
-                sentimentPositivityScore = sentimentCount.toPositivityScore()
+                sentimentPositivityScore = sentimentCount.toPositivityScore(),
+                isEmpty = sentimentCount.checkIsEmpty()
             )
         }.stateIn(
                 scope = viewModelScope,
@@ -35,12 +36,23 @@ class LogSummaryViewModel(moodLogsRepository: MoodLogsRepository): ViewModel() {
 data class  LogSummaryUiState(
     val sentimentCountList: List<SentimentCount> = listOf(),
     var sentimentBarDataList: List<BarData> = listOf(),
-    var sentimentPositivityScore: Float = 0f
+    var sentimentPositivityScore: Float = 0f,
+    var isEmpty: Boolean = true
 )
 
+private fun List<SentimentCount>.checkIsEmpty(): Boolean {
+    var isEmpty = true
+    this.forEach { sCount ->
+        if(sCount.count>0) {
+            isEmpty = false
+        }
+    }
+    return isEmpty
+}
+
 private fun List<SentimentCount>.toPositivityScore(): Float {
-    var score: Float = 0f
-    var totalCount: Int = 0
+    var score = 0f
+    var totalCount = 0
     this.forEach {
         val id = it.sentimentID-2130968602
         totalCount += it.count

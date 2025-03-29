@@ -7,7 +7,6 @@ import androidx.lifecycle.viewmodel.initializer
 import androidx.lifecycle.viewmodel.viewModelFactory
 import com.example.moodplusplus2.MoodApplication
 import com.example.moodplusplus2.data.LocalExternalResDataProvider
-import com.example.moodplusplus2.data.LocalSentimentCountDataProvider
 import com.example.moodplusplus2.ui.exercise.ExerciseViewModel
 import com.example.moodplusplus2.ui.external.ExternalResViewModel
 import com.example.moodplusplus2.ui.moodlog.LogDetailViewModel

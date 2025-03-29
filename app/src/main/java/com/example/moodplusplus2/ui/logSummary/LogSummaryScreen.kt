@@ -23,14 +23,10 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.input.nestedscroll.nestedScroll
 import androidx.compose.ui.res.stringResource
-import androidx.compose.ui.semantics.Role.Companion.Button
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.viewmodel.compose.viewModel
 import co.yml.charts.axis.AxisData
-import co.yml.charts.axis.DataCategoryOptions
-import co.yml.charts.common.model.Point
-import co.yml.charts.common.utils.DataUtils
 import co.yml.charts.ui.barchart.BarChart
 import co.yml.charts.ui.barchart.models.BarChartData
 import co.yml.charts.ui.barchart.models.BarChartType
@@ -39,7 +35,6 @@ import com.example.moodplusplus2.MoodTopAppBar
 import com.example.moodplusplus2.R
 import com.example.moodplusplus2.ui.AppViewModelProvider
 import com.example.moodplusplus2.ui.navigation.BottomNavigationDestination
-import kotlinx.coroutines.flow.StateFlow
 
 object LogSummaryDestination: BottomNavigationDestination {
     override val route = "LogSummary"
@@ -87,10 +82,10 @@ private fun SummaryBody(
         horizontalAlignment = Alignment.CenterHorizontally,
         modifier = modifier,
     ) {
-        if(summaryUiState.sentimentCountList.isEmpty()) {
+        if(summaryUiState.isEmpty) {
             Spacer(modifier = Modifier.height(56.dp))
             Text(
-                text = "Not enough data to generate summary",
+                text = "No data to generate summary!",
                 textAlign = TextAlign.Center,
                 style = MaterialTheme.typography.titleLarge,
                 modifier = Modifier.padding(contentPadding)
